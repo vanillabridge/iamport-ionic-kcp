@@ -35,7 +35,7 @@ export class IamportService {
             this.platform.ready().then(()=> {
                 const paymentUrl = 'iamport-checkout.html?user-code=' + userCode;
                 const redirectUrl = "http://localhost/iamport";
-                const browser = this.inAppBrowser.create(paymentUrl,'_blank', 'location=no');
+                const browser = this.inAppBrowser.create(paymentUrl,'_system', 'location=no');
                 let paymentProgress = false;
 
                 param.m_redirect_url = redirectUrl;
@@ -96,7 +96,7 @@ export class IamportService {
             this.platform.ready().then(() => {
                 const certificationUrl = 'iamport-checkout.html?user-code=' + userCode;
                 const redirectUrl = "http://localhost/iamport-certification";
-                const browser = this.inAppBrowser.create(certificationUrl, '_blank', 'location=no');
+                const browser = this.inAppBrowser.create(certificationUrl, '_system', 'location=no');
 
                 let certificationProgress = false;
 
